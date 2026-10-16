@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  # Fetch the Windows installer from the GitHub release at build time so it is
+  # served directly from this site (no redirects), as Microsoft Partner Center requires.
+  command = "mkdir -p files && curl -fsSL -o files/Setup_RustedWarfare_WorkShop.exe https://github.com/BLACKLABELAPPS/Ruster.WarDate/releases/download/relase/Setup_RustedWarfare_WorkShop.exe"
+
+[[headers]]
+  for = "/files/*.exe"
+  [headers.values]
+    Content-Type = "application/octet-stream"
+    Content-Disposition = "attachment"
