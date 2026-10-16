@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+
+# Stable HTTPS link to the Windows installer (hosted on the GitHub "relase" release).
+# Use https://coruscating-crisp-0c7dc0.netlify.app/download/Setup_RustedWarfare_WorkShop.exe
+# as the package URL in Microsoft Partner Center.
+[[redirects]]
+  from = "/download/Setup_RustedWarfare_WorkShop.exe"
+  to = "https://github.com/BLACKLABELAPPS/Ruster.WarDate/releases/download/relase/Setup_RustedWarfare_WorkShop.exe"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/download"
+  to = "/download.html"
+  status = 200
